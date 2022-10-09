@@ -1,0 +1,434 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .fullHeight {
+    min-height: 100vh;
+  }
+  
+  /*ASTRONAUT*/
+  .astronaut {
+    background-image: url(/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  
+  .astronaut .headingbox {
+    border: 4px solid black;
+    width: 10rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    padding: 20px;
+    font-family: "Rubik", sans-serif;
+  }
+  
+  .astronaut .allCaps {
+    text-transform: uppercase;
+  }
+  
+  .astronaut .headingbox .headerText {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  
+  .astronaut .headingbox .headerlink {
+    margin-bottom: 3px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*HAMBURGER*/
+  .hamburgerMenu {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 0;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .hamburgerMenu .lines {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    position: relative;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menuToggle {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .menuToggle:checked + .hamburgerWrap .hamburgerMenu .lines {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menuToggle:checked + .hamburgerWrap .hamburgerMenu .lines:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menuToggle:checked + .hamburgerWrap .hamburgerMenu .lines:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .menuToggle:checked + .hamburgerWrap .hamburgerMenu .lines:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    visibility: hidden;
+  }
+  
+  .navBar a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .menuToggle:checked + .hamburgerWrap .navBar {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    text-shadow: 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navBar .menu .underline {
+    text-decoration: none;
+    background-image: linear-gradient(90deg, pink, #D200A2);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    border-radius: 5px;
+    transition: background-size 300ms ease-in-out;
+  }
+  
+  /*TEXTPAGE*/
+  .textPage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+    background-size: cover;
+    color: white;
+    font-family: "Rubik", sans-serif;
+  }
+  
+  .textPage .wrapper {
+    display: block;
+    position: relative;
+  }
+  
+  .textPage .columns {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 70px;
+  }
+  
+  .textPage .spaceVentures {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    font-size: 100%;
+    height: 200px;
+    text-shadow: 2px 2px 10px #000000;
+  }
+  
+  .textPage .space {
+    font-weight: 600;
+    font-size: 85px;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .textPage .ventures {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 105px;
+    opacity: 0.7;
+    position: relative;
+    left: 78px;
+    bottom: 105px;
+  }
+  
+  .textPage .titleTextPage {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 5px;
+  }
+  
+  .textPage .textStyle {
+    line-height: 1.6;
+    margin: 6px 0;
+    font-weight: 400;
+    font-size: 0.93rem;
+  }
+  
+  .textPage .quotes {
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .textPage .quoteA {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    position: relative;
+    left: 75px;
+    margin: 20px 0;
+  }
+  
+  .textPage .quoteA::before {
+    content: open-quote;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+    opacity: 50%;
+    font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    left: -15px;
+  }
+  
+  .textPage .quoteA::after {
+    content: close-quote;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+    opacity: 50%;
+    font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    top: 65px;
+  }
+  
+  .textPage .gradient .quoteB {
+    display: none;
+  }
+  
+  .insertLineBreak::before {
+    content: "\a";
+    white-space: pre;
+  }
+  
+  .textPage .pinkText {
+    font-size: 0.85rem;
+    color: #D200A2;
+  }
+  
+  .textPage .linkUnderline {
+    text-decoration: underline;
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+  }
+  
+  /*FOOTER*/
+  .cookiePopUp {
+    box-sizing: border-box;
+    z-index: 5;
+    background-color: #000E1B;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+  }
+  
+  .cookiePopUp .cookieText .cookieButton .buttonText {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  
+  .cookiePopUp .cookieText {
+    color: #D200A2;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-size: 0.75rem;
+  }
+  
+  .buttonText {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cookiePopUp .cookieButton {
+    background-color: #003568;
+    border: 0;
+    padding: 7px 13px;
+    cursor: pointer;
+  }
+  
+  .cookiePopUp.disable {
+    display: none;
+  }
+  
+  /*MOBILE*/
+  @media screen and (max-width: 800px) {
+    .textPage .space {
+      font-size: 4rem;
+      position: relative;
+      z-index: 1;
+      left: -24px;
+      top: 62px;
+    }
+    .textPage .ventures {
+      font-size: 5rem;
+      left: -14px;
+      bottom: 47px;
+      position: relative;
+      top: 13px;
+    }
+    
+  }
+  
+  /*IPAD*/
+  @media screen and (min-width: 801px) and (max-width: 850px) {
+     .textPage .space {
+      font-size: 7rem;
+    }
+    .textPage .ventures {
+      font-size: 9rem;
+      left: 5px;
+      bottom: 85px;
+    }
+  }
+  
+  /*DESKTOP*/
+  @media screen and (min-width: 850px) {
+    .menu li:hover .underline {
+      background-size: 100% 7px;
+      color: inherit;
+    }
+    .astronaut .headingBox {
+      width: 15rem;
+    }
+    .astronaut .headingBox .headerLink {
+      float: right;
+      cursor: pointer;
+    }
+    .astronaut .headingBox .headerLink span {
+      position: relative;
+      left: 0;
+      transition: left 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    .astronaut .headingBox .headerLink:hover span {
+      left: 10px;
+    }
+    .textPage {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/photos/raphael-nogueira-svbDI1Pq30s-unsplash.jpg);
+      background-size: cover;
+    }
+    .textPage .wrapper {
+      display: flex;
+    }
+    .textPage .columns {
+      padding: 55px 90px;
+    }
+    .textPage .spaceVentures {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 100px;
+    }
+    .textPage .space {
+      font-size: 7rem;
+    }
+    .textPage .ventures {
+      font-size: 9rem;
+      left: 5px;
+      bottom: 85px;
+    }
+    .textPage .textStyle pinkText {
+      padding: 0 20px;
+    }
+    .textPage .textStyle {
+      font-size: 1rem;
+    }
+    .textPage .gradient .quoteB {
+      display: block;
+      font-size: 2.7rem;
+      line-height: 1.2;
+      font-weight: 300;
+      background-image: linear-gradient(to bottom right, #D200A2, white, #D200A2);
+      color: #de466c;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-text-emphasis-color: transparent;
+              text-emphasis-color: transparent;
+      opacity: 0.3;
+      padding: 40px 0;
+      width: 400px;
+    }
+    .textPage .majorTomImg::before {
+      content: "";
+      background-image: url(/assets/photos/major_tom.jpg);
+      background-size: 85px 125px;
+      width: 85px;
+      height: 125px;
+      display: block;
+      transform: rotate(3deg);
+      float: right;
+      margin: 0 40px;
+    }
+    .insertLineBreak::before {
+      content: none;
+    }
+    .textPage .majorTomLink {
+      cursor: pointer;
+    }
+    .textPage .majorTomLink .arrow {
+      position: relative;
+      left: 0;
+      transition: left 0.3s ease-in-out;
+    }
+    .textPage .majorTomLink:hover .arrow {
+      left: 10px;
+    }
+    .cookiePopUp .cookieText {
+      font-size: 0.9rem;
+    }
+    .cookiePopUp .cookieButton:hover {
+      background-color: #002A53;
+    }
+  }/*# sourceMappingURL=style.css.map */
